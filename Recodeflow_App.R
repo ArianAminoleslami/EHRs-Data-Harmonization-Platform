@@ -44,27 +44,6 @@ recodeflow_sqlChunk=function(db_connection,var_sheet, var_details,original_table
   )
 }
 
-
-
-
-
-#con.e.ccrs=dbConnect(RSQLite::SQLite(),dbname="/mnt/CihiRW/CCRS_test/CCRS_EPIS-M.sqlite") # This is the dataset available in X:\CCRS_db\HCRS_ASSES.sqlite
-
-#con.e.hcrs=dbConnect(RSQLite::SQLite(),dbname="/mnt/CihiRW/HCRS_test/HCRS_EPIS.sqlite")
-
-#con.a.hcrs=dbConnect(RSQLite::SQLite(),dbname="/mnt/CihiRW/HCRS_test/HCRS_ASSES.sqlite")
-
-#con.a.ccrs=dbConnect(RSQLite::SQLite(),dbname="/mnt/CihiRW/CCRS_test/CCRS_ASSES.sqlite")
-
-#con.dad=dbConnect(RSQLite::SQLite(),dbname="/mnt/CihiRW/flowed_data/DAD.sqlite")
-
-#columnnames_ccrs_asses<-colnames(dbGetQuery(con.a.ccrs, "SELECT * FROM CCRS_ASSES LIMIT 1"))
-#columnnames_hcrs_asses<-colnames(dbGetQuery(con.a.hcrs, "SELECT * FROM HCRS_ASSES LIMIT 1"))
-#columnnames_ccrs_epis<-colnames(dbGetQuery(con.e.ccrs, "SELECT * FROM CCRS_Epis LIMIT 1"))
-#columnnames_dad<-colnames(dbGetQuery(con.dad, "SELECT * FROM pre_dad10 LIMIT 1"))
-#df<-data.frame(matrix(nrow=0,ncol = 7))
-#colnames(df)=c("variable","databaseStart","variableStart","typeStart","typeEnd","recStart","recEnd")
-db_names=c("RDEN_CCRS_Assess", "RDEN_HCRS_Asses","RDEN_CCRS_Epis", "RDEN_DAD")
 ui <- fluidPage(
   
   shinyjs::useShinyjs(),
