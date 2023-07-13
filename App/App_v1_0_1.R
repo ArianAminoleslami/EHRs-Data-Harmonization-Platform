@@ -1,5 +1,5 @@
 
-# This app was developed b Arian Aminoleslami at University of Toronto in June 2023 and 
+# This app was developed b Arian Aminoleslami in June 2023 and 
 # released under the GNU General Public License v3.0. 
 
 # For inquires or questions, please write to <arian.aminoleslami@utoronto.ca>/
@@ -111,11 +111,11 @@ ui <- fluidPage(
         
         HTML(
           '<p style="font-size: smaller; font-style: italic; color: #4a90e2;">',
-          'This app was developed by Arian Aminoleslami at the University of Toronto in June 2023',
+          'This app was developed by Arian Aminoleslami in June 2023',
           'and released under the GNU General Public License v3.0.</p>',
           '<p style="font-size: smaller; font-style: italic; color: #4a90e2;">',
           'For inquiries or questions, please write to: ',
-          '<a href="mailto:arian.aminoleslami@utoronto.ca" style="color: #4a90e2;">arian.aminoleslami@utoronto.ca</a>',
+          '<a href="mailto:arian.aminoleslami@uwaterloo.ca" style="color: #4a90e2;">arian.aminoleslami@uwaterloo.ca</a>',
           
         ),
         tags$img(src = "logo1.jpg", width = "300px")
