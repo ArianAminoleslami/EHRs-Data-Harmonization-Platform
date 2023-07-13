@@ -117,8 +117,7 @@ ui <- fluidPage(
           'For inquiries or questions, please write to: ',
           '<a href="mailto:arian.aminoleslami@uwaterloo.ca" style="color: #4a90e2;">arian.aminoleslami@uwaterloo.ca</a>',
           
-        ),
-        tags$img(src = "logo1.jpg", width = "300px")
+        )
       )
      # Credits and logos
        
