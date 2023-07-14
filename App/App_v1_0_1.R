@@ -363,7 +363,7 @@ server <- function(input, output, session) {
   output$path<-renderUI({
     if(input$importType==".SQLite"){
       
-      textInput("path1", "Please enter the path to the database", value = "/mnt/CihiRW/CCRS_test/CCRS_ASSES.sqlite")
+      textInput("path1", "Please enter the path to the database", value = "")
       
     }
     
