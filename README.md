@@ -11,9 +11,12 @@ To use this Shiny app on your computer, please follow these steps:
 2. Download the repository from GitHub. Via browser: click on **Code** and then click on [Download ZIP](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/archive/refs/heads/main.zip). Or via terminal shell: run the command `git clone https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform.git`  
 3. Go to the App folder and open the `App_v1_0_1.R` file with RStudio;
 4. On RStudio, click on **Run App**;
-5. The Shiny app interface of the EHRs Data Harmonization Platform should appear on RStudio.
+5. The Shiny app interface of the EHRs Data Harmonization Platform
+should appear on RStudio (see below)
 
-The just-desribed instructions should work on Linux, Microsoft Windows, and Mac operating systems.
+![platform_screenshot](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/assets/137816738/9c06a244-731d-47dc-ac64-70bdd168d57e)
+
+The just-described instructions should work on Linux, Microsoft Windows, and Mac operating systems.
 
 ## Credits
 The EHRs Data Harmonization Platform is mainly based on the [recodeflow](https://big-life-lab.github.io/recodeflow/) R package and is released for free here on GitHub under the GPL-3.0 license.
