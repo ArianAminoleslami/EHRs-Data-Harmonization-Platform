@@ -115,7 +115,7 @@ ui <- fluidPage(
           'and released under the GNU General Public License v3.0.</p>',
           '<p style="font-size: smaller; font-style: italic; color: #4a90e2;">',
           'For inquiries or questions, please write to: ',
-          '<a href="mailto:arian.aminoleslami@uwaterloo.ca" style="color: #4a90e2;">arian.aminoleslami@uwaterloo.ca</a>',
+          '<a href="mailto:aaminoleslami@uwaterloo.ca" style="color: #4a90e2;">aaminoleslami@uwaterloo.ca</a>',
           
         ),
                  
