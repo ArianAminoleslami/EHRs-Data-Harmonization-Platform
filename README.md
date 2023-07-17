@@ -9,7 +9,7 @@ The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shi
 To use this Shiny app on your computer, please follow these steps:
 1. Install [RStudio](https://www.rstudio.com/categories/rstudio-ide/) on your computer;
 2. Download the repository from GitHub. Via browser: click on **Code** and then click on [Download ZIP](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/archive/refs/heads/main.zip). Or via terminal shell: run the command `git clone https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform.git`  
-3. Go to the [App] folder and open the `App_v1_0_1.R` file with RStudio;
+3. Go to the [App](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/tree/main/App) folder and open the `App_v1_0_1.R` file with RStudio;
 4. On RStudio, click on **Run App**;
 5. The Shiny app interface of the EHRs Data Harmonization Platform
 should appear on RStudio (see below).
