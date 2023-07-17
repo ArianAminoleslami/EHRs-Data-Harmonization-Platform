@@ -12,7 +12,7 @@ To use this Shiny app on your computer, please follow these steps:
 3. Go to the App folder and open the `App_v1_0_1.R` file with RStudio;
 4. On RStudio, click on **Run App**;
 5. The Shiny app interface of the EHRs Data Harmonization Platform
-should appear on RStudio (see below)
+should appear on RStudio (see below).
 
 ![platform_screenshot](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/assets/137816738/9c06a244-731d-47dc-ac64-70bdd168d57e)
 
