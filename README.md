@@ -22,4 +22,4 @@ The just-described instructions should work on Linux, Microsoft Windows, and Mac
 The EHRs Data Harmonization Platform is mainly based on the [recodeflow](https://big-life-lab.github.io/recodeflow/) R package and is released for free here on GitHub under the GPL-3.0 license.
 
 ## Contacts
-The EHRs Data Harmonization Platform was developed and is maintained by Arian Aminoleslami. For inquiries or questions, please write an email to: arian.aminoleslami@uwaterloo.ca
+The EHRs Data Harmonization Platform was developed and is maintained by Arian Aminoleslami. For inquiries or questions, please write an email to: aaminoleslami@uwaterloo.ca
