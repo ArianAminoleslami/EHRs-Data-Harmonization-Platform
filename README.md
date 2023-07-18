@@ -3,7 +3,7 @@
 
 # EHRs Data Harmonization Platform
 ## Description
-The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shiny app developed in R that can be used to harmonized data derived from electronic health records (EHRs).  
+The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shiny app developed in R that can be used to harmonize data derived from electronic health records (EHRs).  
 
 ## Usage instructions
 To use this Shiny app on your computer, please follow these steps:
