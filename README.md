@@ -14,7 +14,7 @@ To use this Shiny app on your computer, please follow these steps:
 5. The Shiny app interface of the EHRs Data Harmonization Platform
 should appear on RStudio (see below).
 
-![platform_screenshot](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/assets/137816738/9c06a244-731d-47dc-ac64-70bdd168d57e)
+<img width="620" alt="image" src="https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/assets/137816738/59d33325-4c83-43ae-8a7c-d45778890899">
 
 The just-described instructions should work on Linux, Microsoft Windows, and Mac operating systems.
 
