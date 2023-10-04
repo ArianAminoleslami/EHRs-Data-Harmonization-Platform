@@ -1581,7 +1581,7 @@ server <- function(input, output, session) {
       
     }
     
-    else if (input$importType!=c(".csv",".RDS",".sas7bdat" )) {
+    else if (input$importType%in%c(".csv",".RDS",".sas7bdat" )) {
       
       withProgress( dataframe()%>%
                       select_at(input$var)
