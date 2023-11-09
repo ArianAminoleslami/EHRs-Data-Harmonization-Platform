@@ -404,9 +404,9 @@ ui <- fluidPage(
       tabsetPanel(
         
         tabPanel("Recodeflow", 
-                 radioButtons("importType", "Please choose the format of your original dataset" ,choices = c(".csv",".RDS",".sas7bdat",".SQLite", ".psv (large datasets)"), selected = ".csv"),
+                 radioButtons("importType", "Please choose the format of your original dataset" ,choices = c("Comma-delimited CSVs",".RDS",".sas7bdat",".SQLite", "Large pipe-delimited CSVs"), selected = "Comma-delimited CSVs"),
                  conditionalPanel(
-                   condition = "input.importType == '.psv (large datasets)'",
+                   condition = "input.importType == 'Large pipe-delimited CSVs'",
                    radioButtons("singleorgroup", "From a single file or multiple files in a folder?", choices = c("Single", "Multiple"), selected = "Single")
                  ),
                  conditionalPanel(
@@ -559,9 +559,9 @@ server <- function(input, output, session) {
   #### download recoded ####
   output$downloadType<-renderUI({
     
-    if(input$importType%in% c(".csv",".RDS",".sas7bdat" )){
+    if(input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat" )){
       
-      radioButtons("downloadType1", "Please choose the format of your recoded dataset",choices = c(".csv",".RDS"))
+      radioButtons("downloadType1", "Please choose the format of your recoded dataset",choices = c("Comma-delimited CSVs",".RDS"))
       
     }
     
@@ -570,7 +570,7 @@ server <- function(input, output, session) {
   
   output$downloadRecoded<-renderUI({
     
-    if(input$importType%in% c(".csv",".RDS",".sas7bdat" )){
+    if(input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat" )){
       
       downloadButton("downloadrecoded","Download your recoded dataset!")
       
@@ -581,7 +581,7 @@ server <- function(input, output, session) {
   
   output$addmorevars<-renderUI({
     
-    if(input$importType%in% c(".csv",".RDS",".sas7bdat" )){
+    if(input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat" )){
       
       selectInput("cbind","Do you want to add more columns from the original dataset to your recoded dataset?", choices = names(), multiple = TRUE )
       
@@ -615,12 +615,12 @@ server <- function(input, output, session) {
   
   
   output$downloadrecoded<-downloadHandler(
-    filename= function() { paste0(file_name(),"_","recoded",Sys.Date(),"_",format(Sys.time(), "%H-%M-%S"),ifelse(input$downloadType1==".csv",".csv",".RDS"))
+    filename= function() { paste0(file_name(),"_","recoded",Sys.Date(),"_",format(Sys.time(), "%H-%M-%S"),ifelse(input$downloadType1=="Comma-delimited CSVs",".csv",".RDS"))
       
     },
     
     content = function(file){
-      if (input$downloadType1==".csv"){
+      if (input$downloadType1=="Comma-delimited CSVs"){
         
         write.csv(df_recoded(),file,row.names = FALSE)
       }
@@ -657,7 +657,7 @@ server <- function(input, output, session) {
   
   
   output$path<-renderUI({
-    if((input$importType == ".SQLite") | (input$importType== ".psv (large datasets)"& input$singleorgroup=="Single" ) ){
+    if((input$importType == ".SQLite") | (input$importType== "Large pipe-delimited CSVs"& input$singleorgroup=="Single" ) ){
       
       textInput("path1", "Please enter the path to the database or dataset", value = "", placeholder = "e.g. C:/users/../test.csv or test.sqlite ")
       
@@ -676,7 +676,7 @@ server <- function(input, output, session) {
   
   
   output$pathtowrite<-renderUI({
-    if(input$importType==".psv (large datasets)" & input$singleorgroup=="Single"){
+    if(input$importType=="Large pipe-delimited CSVs" & input$singleorgroup=="Single"){
       
       textInput("pathtowrite1", "Please enter a preferred path to a csv file that you want to create for the recoded data", placeholder ="e.g. C:/users/../test_recoded.csv" )
       
@@ -703,7 +703,7 @@ server <- function(input, output, session) {
   #})
   
   output$chunksize<-renderUI({
-    if(input$importType %in% c(".SQLite",".psv (large datasets)")){
+    if(input$importType %in% c(".SQLite","Large pipe-delimited CSVs")){
       
       numericInput("chunksize1", "choose the size of chunk", min=100000, max=10000000, step=100000, value = 100000)
       
@@ -717,7 +717,7 @@ server <- function(input, output, session) {
   #######
   output$import<-renderUI({
     
-    if (input$importType==".csv"){
+    if (input$importType=="Comma-delimited CSVs"){
       
       fileInput("file1", "Please choose a csv file")
       
@@ -740,7 +740,7 @@ server <- function(input, output, session) {
   
   database<-reactive({
     
-    if (input$importType==".csv"){
+    if (input$importType=="Comma-delimited CSVs"){
       
       basename(file$datapath)
       
@@ -752,7 +752,7 @@ server <- function(input, output, session) {
   
   dataframe<-reactive({
     
-    if (input$importType==".csv"){
+    if (input$importType=="Comma-delimited CSVs"){
       file<-input$file1
       ext<-tools:: file_ext(file$datapath)
       
@@ -800,7 +800,7 @@ server <- function(input, output, session) {
   
   output$test<-renderTable({
     
-    if (input$importType%in% c(".csv",".RDS",".sas7bdat" )) {
+    if (input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat" )) {
       
       dataframe()%>%
         select(1:min(12,ncol(dataframe())))%>%
@@ -815,16 +815,16 @@ server <- function(input, output, session) {
       d<-tbl(dbConnect(RSQLite::SQLite(),dbname=input$path1),input$tablename1 )%>%
         colnames()
     }
-    else if(input$importType==".psv (large datasets)" & input$singleorgroup=="Single") {
+    else if(input$importType=="Large pipe-delimited CSVs" & input$singleorgroup=="Single") {
       colnames(read.csv(input$path1,nrows=1,sep="|"))
     }
     
-    else if(input$importType==".psv (large datasets)" & input$singleorgroup=="Multiple") {
+    else if(input$importType=="Large pipe-delimited CSVs" & input$singleorgroup=="Multiple") {
       
       colnames(read.csv(list.files(path = input$pathtofolder, pattern = ".csv", full.names = TRUE)[1],nrows=1,sep="|"))
     }
     
-    else if (input$importType%in% c(".csv",".RDS",".sas7bdat" )) {
+    else if (input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat" )) {
       
       d<-dataframe()%>%
         colnames()
@@ -1709,17 +1709,17 @@ server <- function(input, output, session) {
                       collect())
     }
     
-    else if(input$importType==".psv (large datasets)" & input$singleorgroup=="Single") {
+    else if(input$importType=="Large pipe-delimited CSVs" & input$singleorgroup=="Single") {
       fread(input$path1, select = input$var,sep="|")
       
     }
     
-    else if(input$importType==".psv (large datasets)" & input$singleorgroup=="Multiple") {
+    else if(input$importType=="Large pipe-delimited CSVs" & input$singleorgroup=="Multiple") {
       shinyjs::alert("The summary stats does not work 
                        when the data is splitted to multiple files. Please select a single file.")
     }
     
-    else if (input$importType%in%c(".csv",".RDS",".sas7bdat" )) {
+    else if (input$importType%in%c("Comma-delimited CSVs",".RDS",".sas7bdat" )) {
       
       withProgress( dataframe()%>%
                       select_at(input$var)
@@ -1775,18 +1775,18 @@ server <- function(input, output, session) {
   
   df_recoded<- eventReactive(input$recode,{
     
-    if(input$importType%in% c(".csv",".RDS",".sas7bdat")){
+    if(input$importType%in% c("Comma-delimited CSVs",".RDS",".sas7bdat")){
       tryCatch(rec_with_table(dataframe(),variables =finalV(), variable_details =finalD(),database_name =input$db)%>%cbind(dataframe()%>%select_at(input$cbind)))
       
     }
     
     
-    else if (input$importType== ".psv (large datasets)" & input$singleorgroup=="Single"){
+    else if (input$importType== "Large pipe-delimited CSVs" & input$singleorgroup=="Single"){
       
       csv_chunk(file_input = input$path1,file_output = input$pathtowrite1, chunk_size =input$chunksize1, var_sheet = finalV(), var_details =finalD(), db_name = input$db, var=input$var )
     }
     
-    else if (input$importType== ".psv (large datasets)" & input$singleorgroup=="Multiple"){
+    else if (input$importType== "Large pipe-delimited CSVs" & input$singleorgroup=="Multiple"){
       
       csv_chunk_multiple(file_input = input$pathtofolder, file_output =input$pathtofolderwrite ,chunk_size =input$chunksize1, var_sheet = finalV(), var_details =finalD(), db_name = input$db, var=input$var )
     }
