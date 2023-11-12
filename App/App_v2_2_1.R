@@ -410,11 +410,11 @@ ui <- fluidPage(
                    radioButtons("singleorgroup", "From a single file or multiple files in a folder?", choices = c("Single", "Multiple"), selected = "Single")
                  ),
                  conditionalPanel(
-                   condition = "input.singleorgroup == 'Multiple'",
+                   condition = "input.singleorgroup == 'Multiple' & input.importType == 'Large pipe-delimited CSVs'",
                    textInput("pathtofolder", "Please enter the path to the folder where all files are located", value = "", placeholder = "e.g. C:/users/../files/original_data")
                  ),
                  conditionalPanel(
-                   condition = "input.singleorgroup == 'Multiple'",
+                   condition = "input.singleorgroup == 'Multiple' & input.importType == 'Large pipe-delimited CSVs'",
                    textInput("pathtofolderwrite", "Please enter the path to the folder where all recoded files will be stored", value = "", placeholder = "e.g. C:/users/../files/recoded_data")
                  ),
                  uiOutput("import"),
