@@ -1363,7 +1363,7 @@ server <- function(input, output, session) {
   
   new<-observeEvent(input$Add,{
     
-    if(input$derived=="Yes" & input$alreadyD=="No"){
+    if(input$derived=="Yes" ){
       if(input$library=="No"){
         newrec<-isolate(data.frame( 
           variable_name=input$var_name,
@@ -1376,7 +1376,7 @@ server <- function(input, output, session) {
         )
       }}
     
-    if(input$derived=="Yes" & input$alreadyD=="No"){
+    if(input$derived=="Yes"){
       if(input$library=="No"){
         isolate(derived_vars$df<-rbind(derived_vars$df, newrec))
       }}
