@@ -56,8 +56,8 @@ csv_chunk_multiple<-function(file_input,chunk_size,file_output,var_sheet,var_det
       
       num_rows <- 0
       # Read the file line by line and count rows
-      while (length(line <- readLines(input_con2, n = 1,warn = FALSE)) > 0) {
-        num_rows <- num_rows + 1
+      while (length(line <- readLines(input_con2, n = chunk_size,warn = FALSE)) > 0) {
+        num_rows <- num_rows + length(line)
       }
       
       # Close the file
@@ -138,8 +138,8 @@ csv_chunk<-function(file_input,chunk_size,file_output,var_sheet,var_details,db_n
     
     num_rows <- 0
     # Read the file line by line and count rows
-    while (length(line <- readLines(input_con2, n = 1,warn = FALSE)) > 0) {
-      num_rows <- num_rows + 1
+    while (length(line <- readLines(input_con2, n = chunk_size,warn = FALSE)) > 0) {
+      num_rows <- num_rows + length(line)
     }
     
     # Close the file
