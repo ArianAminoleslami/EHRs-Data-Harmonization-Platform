@@ -24,7 +24,7 @@ The just-described instructions should work on Linux, Microsoft Windows, and Mac
 
 The Shiny app has 5 main tabs:
 
-- **Recodeflow Tab**:
+- **Recodeflow, variable and variable details sheet Tabs**:
   - Connect/upload the non-curated database.
   - Use the sidebar panel to update the “variable details sheet” and “variable sheet”.
   - Determine the output of the recoded dataset.
