@@ -12,8 +12,7 @@ It might be useful to have a derived feature that indicates both the MMSE catego
 <div style="text-align: center;">
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/c727d0fb-5a4e-4bec-8d57-60ec4759e8da">
 </div>
-*Table of the MMSE-CEP values. Each patient can have one of these eight values for the derived variable MMSE-CEP*
-
+<br>
 To generate this derived feature, we can use the `MMSE_category` variable we produced in the previous step, and we need to create a new recoded feature for CEP, too. As per the rules of *recodeflow*, a derived variable can be created only from recoded variables.
 
 We follow the steps described in the previous section and generate a recoded variable called `CEP_bin`, which has the value `graduated` when CEP equals 1 and has the value `non-graduated` when CEP equals 0.
