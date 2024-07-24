@@ -34,12 +34,12 @@ This is a good example to discuss how recodeflow handles missing values. Recodef
 
 In this example, we will specify that any categories other than what we specified, should be categorized as NA(b) or missing.
 
-<br><br>
+<br>
 
 <div style="text-align: center;">
 <img width="620" alt="categorize" src="https://github.com/user-attachments/assets/b0af4321-001d-4a5a-985b-5559b667cad3">
 </div>
-
+<br>
 Figure shows the steps we followed for this example and how the missing values are handled in the details sheet. Note that labels and notes are not mandatory fields of the details sheet, so there are no inputs for them on the app and users can modify them on the table’s relevant cell if they prefer to.
 
 
