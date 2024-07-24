@@ -6,15 +6,33 @@
 The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shiny app developed in R that can be used to harmonize data derived from electronic health records (EHRs).  
 
 ## Usage instructions
-To use this Shiny app on your computer, please follow these steps:
-1. Install [RStudio](https://www.rstudio.com/categories/rstudio-ide/) on your computer;
-2. Download the repository from GitHub. Via browser: click on **Code** and then click on [Download ZIP](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/archive/refs/heads/main.zip). Or via terminal shell: run the command `git clone https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform.git`  
-3. Go to the [App](https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/tree/main/App) folder and open the `App_v...` file with RStudio;
-4. On RStudio, click on **Run App**;
-5. The Shiny app interface of the EHRs Data Harmonization Platform
-should appear on RStudio (see below).
+# Running the Shiny App
+
+## Instructions
+
+### Using RStudio
+
+1. **Install RStudio**: Make sure RStudio is installed on your computer.
+2. **Download the Repository**:
+   - Via browser: Click on `Code` and then click on `Download ZIP`. Extract the ZIP file on your computer.
+   - Via terminal shell: Run the command 
+     ```sh
+     git clone https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform.git
+     ```
+3. **Open the App**: Navigate to the `App` folder and open the `App_v...` file with RStudio.
+4. **Run the App**: In RStudio, click on `Run App`.
+5. **View the App**: The Shiny app interface of the EHRs Data Harmonization Platform should appear in RStudio. 
 
 <img width="724" alt="image" src="https://github.com/ArianAminoleslami/EHRs-Data-Harmonization-Platform/assets/137816738/650a9276-bcc1-4946-b979-fec235f9c50d">
+
+### Using R Command Line
+
+1. **Open a Terminal or Command Prompt**: Navigate to the directory containing your Shiny app (the directory with `app.R`).
+2. **Run the App**: Use the following command to start the app:
+   ```sh
+   R -e "shiny::runApp('path/to/your/app')"
+3. **View the App**: Open your web browser and go to the URL displayed in the terminal, e.g., http://127.0.0.1:XXXX.
+
 
 
 The just-described instructions should work on Linux, Microsoft Windows, and Mac operating systems.
