@@ -32,8 +32,8 @@ One important step in curation is to understand how a variable really looks in a
 ## Derived Variables Documentation Tab
 The “derived variables documentation” tab stores the information of derived variables which use a pre-programmed, custom function. This includes the R code of the function and the name of the function. This tab's functionality will be illustrated in an example.
 
-## Credits
+# Credits
 The EHRs Data Harmonization Platform is mainly based on the [recodeflow](https://big-life-lab.github.io/recodeflow/) R package and is released for free here on GitHub under the GPL-3.0 license.
 
-## Contacts
+# Contacts
 The EHRs Data Harmonization Platform was developed and is maintained by Arian Aminoleslami. For inquiries or questions, please write an email to: aaminoleslami@uwaterloo.ca
