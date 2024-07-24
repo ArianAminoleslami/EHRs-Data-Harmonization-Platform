@@ -1,4 +1,4 @@
-## Mapping MMSE Numerical Feature to MMSE Category
+## Example: Mapping MMSE Numerical Feature to MMSE Category
 
 Let us explain a use case where a user would like to map the mini mental state examination (MMSE) numerical feature into an MMSE category in the Paquid dataset.
 In the original Paquid dataset, the MMSE comes as a number between 0 and 30, with higher scores indicating better cognitive function. 
