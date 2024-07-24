@@ -5,9 +5,13 @@ In this last use case, we will see an example of a derived variable with a pre-p
 Let us suppose we would like to have a feature that indicates both the MMSE category and the education level of the patients, which is recorded in the dataset through the CEP factor. CEP = 1 means that the patient graduated from primary school, and CEP = 0 means he or she did not.
 
 It might be useful to have a derived feature that indicates both the MMSE category and the CEP status.
-<br>
-<img width="631" alt="image" src="https://github.com/user-attachments/assets/c727d0fb-5a4e-4bec-8d57-60ec4759e8da">
 
+
+<br>
+
+<div style="text-align: center;">
+<img width="631" alt="image" src="https://github.com/user-attachments/assets/c727d0fb-5a4e-4bec-8d57-60ec4759e8da">
+</div>
 *Table of the MMSE-CEP values. Each patient can have one of these eight values for the derived variable MMSE-CEP*
 
 To generate this derived feature, we can use the `MMSE_category` variable we produced in the previous step, and we need to create a new recoded feature for CEP, too. As per the rules of *recodeflow*, a derived variable can be created only from recoded variables.
