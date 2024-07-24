@@ -31,7 +31,11 @@ The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shi
    R -e "shiny::runApp('path/to/your/app')"
 3. **View the App**: Open your web browser and go to the URL displayed in the terminal, e.g., http://127.0.0.1:XXXX.
 
+## Deployed Version
 
+You can also access a deployed version of the Shiny app at [this link](https://poxotn-arian-aminoleslami.shinyapps.io/Arian/).
+
+These methods will allow you to run and view the Shiny app on your computer or server.
 
 The just-described instructions should work on Linux, Microsoft Windows, and Mac operating systems.
 
