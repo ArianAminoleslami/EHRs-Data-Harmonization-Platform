@@ -20,18 +20,25 @@ should appear on RStudio (see below).
 The just-described instructions should work on Linux, Microsoft Windows, and Mac operating systems.
 
 
-# An Overview of the Platform and Its Features
+## An Overview of the Platform and Its Features
+
 The Shiny app has 5 main tabs:
 
-## Recodeflow Tab
-The “Recodeflow” tab is where we connect/upload the non-curated database. Using the sidebar panel and updating the “variable details sheet” and “variable sheet”, we can determine the output of the recoded dataset and start the recoding process by clicking on the “recoded” data.
+- **Recodeflow Tab**:
+  - Connect/upload the non-curated database.
+  - Use the sidebar panel to update the “variable details sheet” and “variable sheet”.
+  - Determine the output of the recoded dataset.
+  - Start the recoding process by clicking on the “recoded” data.
 
-## Summary Tab
-One important step in curation is to understand how a variable really looks in a non-curated database. The “summary” tab allows users to extract information about a variable in the database, see the distribution of different categories, and gain a better understanding of the variable they wish to recode.
+- **Summary Tab**:
+  - Extract information about a variable in the database.
+  - See the distribution of different categories.
+  - Gain a better understanding of the variable to be recoded.
 
-## Derived Variables Documentation Tab
-The “derived variables documentation” tab stores the information of derived variables which use a pre-programmed, custom function. This includes the R code of the function and the name of the function. This tab's functionality will be illustrated in an example.
-
+- **Derived Variables Documentation Tab**:
+  - Store information of derived variables using pre-programmed, custom functions.
+  - Include the R code of the function and the name of the function.
+  - 
 # Credits
 The EHRs Data Harmonization Platform is mainly based on the [recodeflow](https://big-life-lab.github.io/recodeflow/) R package and is released for free here on GitHub under the GPL-3.0 license.
 
