@@ -34,8 +34,12 @@ The Shiny app has 5 main tabs:
   - Extract information about a variable in the database.
   - See the distribution of different categories.
   - Gain a better understanding of the variable to be recoded.
- 
-  <img width="433" alt="Summarytab" src="https://github.com/user-attachments/assets/aed39b3d-ff4f-4739-b538-3335c3b7a1a4">
+  
+  <br><br>
+
+  <div style="text-align: center;">
+    <img width="433" alt="Summarytab" src="https://github.com/user-attachments/assets/aed39b3d-ff4f-4739-b538-3335c3b7a1a4">
+  </div>
 
 
 - **Derived Variables Documentation Tab**:
