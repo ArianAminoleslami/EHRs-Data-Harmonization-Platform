@@ -38,7 +38,6 @@ The Shiny app has 5 main tabs:
 - **Derived Variables Documentation Tab**:
   - Store information of derived variables using pre-programmed, custom functions.
   - Include the R code of the function and the name of the function.
-  - 
 # Credits
 The EHRs Data Harmonization Platform is mainly based on the [recodeflow](https://big-life-lab.github.io/recodeflow/) R package and is released for free here on GitHub under the GPL-3.0 license.
 
