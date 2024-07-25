@@ -1,0 +1,27 @@
+Package: EhrDHP
+Title: What the Package Does (One Line, Title Case)
+Version: 2.3.1
+Authors@R: 
+    person("Arian", "Aminoleslami", email = "aaminole@uwaterloo.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9221-1897"))
+Description: Loads EHR's Data Harminization platform shiny app.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+  shiny,
+  shinyjs,
+  RSQLite,
+  ggplot2,
+  haven,
+  recodeflow,
+  stringr,
+  dplyr,
+  shinybusy,
+  rhandsontable,
+  shinydashboard,
+  data.table,
+  dbplyr,
+  shinyWidgets,
+  DT
