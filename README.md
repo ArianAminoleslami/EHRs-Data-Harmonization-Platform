@@ -9,7 +9,7 @@ The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shi
 ## Installation
 
 ### Using GitHub
-To install the development version of EhrDHP from GitHub, you will need the `devtools` package. You can install `devtools` if you don't already have it:
+To install the development version of EhrDHP from GitHub, you will need the `devtools` package in R. You can install `devtools` if you don't already have it:
 ```r
 install.packages("devtools")
 ```
