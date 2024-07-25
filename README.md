@@ -6,7 +6,23 @@
 The EHRs Data Harmonization Platform is a user-friendly, simple, easy-to-use Shiny app developed in R that can be used to harmonize data derived from electronic health records (EHRs).  
 # Running the Shiny App
 
-## Instructions
+## Installation
+
+### Using GitHub
+To install the development version of EhrDHP from GitHub, you will need the `devtools` package. You can install `devtools` if you don't already have it:
+
+```r
+install.packages("devtools")
+
+Then, you can install EhrDHP using the following command:
+```r
+
+devtools::install_github("ArianAminoleslami/EHRs-Data-Harmonization-Platform")
+
+After installation, you can launch the app with:
+
+```r
+EhrDHP::launch_app()
 
 ### Using RStudio
 
