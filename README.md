@@ -18,12 +18,12 @@ Then, you can install EhrDHP using the following command:
 ```r
 
 devtools::install_github("ArianAminoleslami/EHRs-Data-Harmonization-Platform")
-
+(\``)
 After installation, you can launch the app with:
 
 ```r
 EhrDHP::launch_app()
-
+(\``)
 ### Using RStudio
 
 1. **Install RStudio**: Make sure RStudio is installed on your computer.
